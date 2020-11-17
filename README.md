@@ -1,3 +1,14 @@
+
+This is a GitHub Project template can be used for individul GitHub Projects.
+
+Detailed instruction on how to configure this will be provided soon.
+
+Please contact @NuwanJ for more information.
+
+Based on [jekyll/minima](https://github.com/jekyll/minima) template
+
+---
+
 # minima
 
 *Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
