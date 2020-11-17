@@ -7,3 +7,8 @@
 #
 layout: home
 ---
+
+This is the home page
+
+
+[This is a link to another page](install-jekyll)

@@ -1,14 +1,12 @@
 ---
-layout: default
+layout: structure
 ---
-<article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+<main role="main" class="container pt-5 vh-50" >
+    <div class="container d-flex ">
+        <a class="" href="{{ "/" | absolute_url }}"> <<  {{ site.title | default: site.github.repository_name }}</a>
+    </div>
+    <hr>
 
-  <div class="post-content">
     {{ content }}
-  </div>
-
-</article>
+</main>

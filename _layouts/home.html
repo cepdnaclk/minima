@@ -1,61 +1,29 @@
 ---
-layout: default
+layout: structure
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
+<div class="container">
+    <header class="blog-header pt-3 pb-2 mb-0">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-2 pt-1">
+                <img class=" mx-auto d-block img-fluid" src="{{ '/assets/images/crest.png' | prepend: site.baseurl }}" alt="Logo">
+            </div>
+            <div class="col-8">
+                <a class="blog-header-logo text-dark" href="#">
+                    Department of Computer Engineering <br>
+                    <small class="small">University of Peradeniya, Sri Lanka</small>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-end align-items-center">
+                <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
+            </div>
+        </div>
+    </header>
 </div>
+
+<main role="main" class="container pt-3" style="min-height: 50vh">
+    <h3 class="p-2">{{ site.title }}</h3>
+    <hr>
+
+    {{ content }}
+</main>
