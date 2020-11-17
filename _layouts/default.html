@@ -1,7 +1,15 @@
----
-layout: structure
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<main role="main" class="container pt-5 vh-50" >
-    {{ content }}
-</main>
+{%- include head.html -%}
+
+<body>
+    <main role="main" class="container pt-5 vh-50" >
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+    {% if site.google_analytics %}
+    {% endif %}
+</body>

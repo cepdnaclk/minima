@@ -1,29 +1,37 @@
----
-layout: structure
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="container">
-    <header class="blog-header pt-3 pb-2 mb-0">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-2 pt-1">
-                <img class=" mx-auto d-block img-fluid" src="{{ '/assets/images/crest.png' | prepend: site.baseurl }}" alt="Logo">
-            </div>
-            <div class="col-8">
-                <a class="blog-header-logo text-dark" href="#">
-                    Department of Computer Engineering <br>
-                    <small class="small">University of Peradeniya, Sri Lanka</small>
-                </a>
-            </div>
-            <div class="col-2 d-flex justify-content-end align-items-center">
-                <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
-            </div>
-        </div>
-    </header>
-</div>
+{%- include head.html -%}
 
-<main role="main" class="container pt-3" style="min-height: 50vh">
-    <h3 class="p-2">{{ site.title }}</h3>
-    <hr>
+<body>
+    <div class="container">
+        <header class="blog-header pt-3 pb-2 mb-0">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-2 pt-1">
+                    <img class=" mx-auto d-block img-fluid" src="{{ '/assets/images/crest.png' | prepend: site.baseurl }}" alt="Logo">
+                </div>
+                <div class="col-8">
+                    <a class="blog-header-logo text-dark" href="#">
+                        Department of Computer Engineering <br>
+                        <small class="small">University of Peradeniya, Sri Lanka</small>
+                    </a>
+                </div>
+                <div class="col-2 d-flex justify-content-end align-items-center">
+                    <a class="d-none btn btn-sm btn-outline-secondary" href="http://www.ce.pdn.ac.lk" target="_blank">Department Site</a>
+                </div>
+            </div>
+        </header>
+    </div>
 
-    {{ content }}
-</main>
+    <main role="main" class="container pt-3" style="min-height: 50vh">
+        <h3 class="p-2">{{ site.title }}</h3>
+        <hr>
+
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+    {% if site.google_analytics %}
+    {% endif %}
+</body>
