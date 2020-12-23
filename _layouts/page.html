@@ -4,17 +4,18 @@
 {%- include head.html -%}
 
 <body>
-    <main role="main" class="container pt-5 vh-50" >
-        <div class="container d-flex ">
-            <a class="" href="{{ "/" | absolute_url }}"> <<  {{ site.title | default: site.github.repository_name }}</a>
-        </div>
-        <hr>
 
-        {{ content }}
-    </main>
+<main role="main" class="container pt-5 vh-50" >
+    <div class="container d-flex ">
+        <a class="" href="{{ "/" | absolute_url }}"> <<  {{ site.title | default: site.github.repository_name }}</a>
+    </div>
+    <hr>
 
-    {%- include footer.html -%}
+    {{ content }}
+</main>
 
-    {% if site.google_analytics %}
-    {% endif %}
+{%- include footer.html -%}
+
+{% if site.google_analytics %}
+{% endif %}
 </body>
