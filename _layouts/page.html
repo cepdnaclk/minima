@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
 {%- include head.html -%}
-
 <body>
 
-<main role="main" class="container pt-5 vh-50" >
-    <div class="container d-flex ">
-        <a class="" href="{{ "/" | absolute_url }}"> <<  {{ site.title | default: site.github.repository_name }}</a>
+<main role="main" class="pt-5 vh-50" style="min-height: 90vh">
+    <div class="container px-5">
+        {{ content }}
     </div>
-    <hr>
-
-    {{ content }}
 </main>
 
 {%- include footer.html -%}
