@@ -112,3 +112,23 @@ th{
     min-width: 150px!important;
     float: right;
 }
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:95%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
