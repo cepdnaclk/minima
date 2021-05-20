@@ -1,6 +1,6 @@
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 img{
     max-width: 100% !important;
@@ -14,7 +14,8 @@ h2{
 }
 
 .img-logo{
-    height: 64px;
+    /* height: 64px; */
+    /* width: 64px; */
 }
 .blog-header {
     line-height: 1;
